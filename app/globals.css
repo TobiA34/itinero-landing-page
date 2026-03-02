@@ -274,13 +274,13 @@ img{ max-width:100%; display:block; }
   .section{ padding: 52px 0; }
   .hero{ padding: 64px 0 30px; }
   .navInner{
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
   }
   .navToggleButton{
     display:inline-flex;
-    align-self:flex-end;
+    margin-left: auto;
   }
   .navLinks{
     display:none;
@@ -288,7 +288,7 @@ img{ max-width:100%; display:block; }
     align-items:flex-start;
     width:100%;
   }
-  .navToggle:checked + .navToggleButton + .navLinks{
+  .navToggle:checked ~ .navLinks{
     display:flex;
   }
   .ctaRow{
