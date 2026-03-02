@@ -231,6 +231,13 @@ img{ max-width:100%; display:block; }
 /* Responsive tweaks */
 @media (max-width: 900px){
   .section{ padding: 60px 0; }
+  .iphoneFrameWrap{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .iphoneFrame{
+    --phone-w: min(260px, 34vw);
+  }
 }
 
 @media (max-width: 768px){
@@ -238,10 +245,12 @@ img{ max-width:100%; display:block; }
   .hero{ padding: 64px 0 30px; }
   .navInner{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 10px;
   }
   .ctaRow{
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
   .h1{
     font-size: clamp(30px, 7vw, 38px);
@@ -253,6 +262,10 @@ img{ max-width:100%; display:block; }
   }
   .phoneCard{
     margin-top: 10px;
+  }
+  .btn{
+    padding: 10px 12px;
+    font-size: 13px;
   }
 }
 
