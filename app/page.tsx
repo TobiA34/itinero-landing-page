@@ -27,10 +27,42 @@ function JsonLd() {
     "publisher": { "@type": "Organization", "name": "Itinero" }
   };
 
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Itinero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Itinero is a travel itinerary planner app for iPhone that helps you turn messy trip ideas into a clean, day-by-day plan. You can keep flights, stays and activities in one simple itinerary instead of scattered notes and screenshots."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is the Itinero itinerary planner app for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Itinero is built for real travellers: solo trips, couples weekends, football away days and longer breaks. If you like having a clear trip planner app instead of 40 open tabs, Itinero is designed for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Itinero free to download?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can download the Itinero travel itinerary planner app for free from the Apple App Store. The core experience is focused on giving you a clean, fast way to plan your trips."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileApp) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }} />
+       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
     </>
   );
 }
@@ -58,6 +90,7 @@ export default function Page() {
             <a className="btn btnGhost" href="#app-screens">Screens</a>
             <a className="btn btnGhost" href="#features">Features</a>
             <a className="btn btnGhost" href="#use-cases">Use cases</a>
+            <a className="btn btnGhost" href="/blog">Blog</a>
             <a className="btn btnPrimary" href={APP_STORE_URL} target="_blank" rel="noreferrer">
               Download on the App Store
             </a>
@@ -69,11 +102,11 @@ export default function Page() {
         <section className="hero" aria-labelledby="hero-heading">
           <div className="container heroGrid">
             <div>
-              <div className="badge">Minimal • Fast • Organised</div>
-              <h1 id="hero-heading" className="h1">Plan better trips with Itinero.</h1>
+              <div className="badge">Itinerary first. Screenshots second.</div>
+              <h1 id="hero-heading" className="h1">Turn messy trip ideas into a clean itinerary.</h1>
               <p className="lead">
-                Create, organise and edit your travel itinerary in seconds.
-                Built for travellers who want structure without the stress.
+                Itinero is a simple travel itinerary planner app for people who like organised trips,
+                not 40 open tabs. Build a day-by-day plan that actually feels realistic.
               </p>
 
               <div className="ctaRow" style={{ marginTop: 14 }}>
@@ -81,6 +114,7 @@ export default function Page() {
                   Download on the App Store
                 </a>
                 <a className="btn" href="#how-it-works">See how it works</a>
+                <a className="btn btnGhost" href="/blog">Read itinerary planning guide</a>
               </div>
 
               <div className="kpiRow">
@@ -176,10 +210,10 @@ export default function Page() {
 
         <section id="how-it-works" className="section" aria-labelledby="how-heading">
           <div className="container">
-            <h2 id="how-heading" className="h2">Travel planning shouldn’t feel messy.</h2>
+            <h2 id="how-heading" className="h2">Travel planning shouldn’t feel like admin.</h2>
             <p className="sub">
-              Notes apps, screenshots, and random links are fine… until you’re actually travelling.
-              Itinero keeps your trip plan in one place, so you spend less time organising and more time enjoying.
+              Notes apps and screenshots are fine until you land. Itinero keeps flights, stays and
+              ideas in one place so you can stop re-building the plan every time you open your phone.
             </p>
 
             <div className="grid3">
@@ -201,35 +235,36 @@ export default function Page() {
 
         <section id="features" className="section" aria-labelledby="features-heading">
           <div className="container">
-            <h2 id="features-heading" className="h2">Simple, clean, and actually useful.</h2>
+            <h2 id="features-heading" className="h2">Built to be your one trip home screen.</h2>
             <p className="sub">
-              Itinero is a minimalist <strong>travel itinerary planner app</strong> built for speed and clarity —
-              no clutter, no learning curve.
+              Itinero is a minimalist <strong>travel itinerary planner app</strong> you can open at the
+              airport, in a taxi or outside a stadium and instantly see what’s next. No clutter, no
+              complicated views to learn.
             </p>
 
             <div className="grid3">
               <div className="card">
-                <h3>🗓 Day-by-day itineraries</h3>
+                <h3>Day-by-day itineraries</h3>
                 <p>Build a full trip schedule without spreadsheets or chaos.</p>
               </div>
               <div className="card">
-                <h3>📍 Locations & activities</h3>
+                <h3>Locations & activities</h3>
                 <p>Keep your must-dos organised — food, culture, football, nightlife, whatever.</p>
               </div>
               <div className="card">
-                <h3>✏️ Edit on the fly</h3>
+                <h3>Edit on the fly</h3>
                 <p>Change times, reorder plans, and keep it flexible.</p>
               </div>
               <div className="card">
-                <h3>🔐 Private by default</h3>
+                <h3>Private by default</h3>
                 <p>Your trips are yours. No weird social feed, no noise.</p>
               </div>
               <div className="card">
-                <h3>⚡ Fast, Apple-style UI</h3>
+                <h3>Fast, Apple-style UI</h3>
                 <p>Designed to feel native, clean and satisfying to use.</p>
               </div>
               <div className="card">
-                <h3>🧠 Built for real travellers</h3>
+                <h3>Built for real travellers</h3>
                 <p>Weekend breaks, big trips, solo travel, couples trips — it scales with you.</p>
               </div>
             </div>
@@ -239,10 +274,11 @@ export default function Page() {
         <section id="use-cases" className="section" aria-labelledby="use-cases-heading">
           <div className="container split">
             <div>
-              <h2 id="use-cases-heading" className="h2">A travel planner for every kind of trip.</h2>
+              <h2 id="use-cases-heading" className="h2">For solo trips, away days and everything in between.</h2>
               <p className="sub">
-                Whether you need a <strong>trip planner app</strong>, a <strong>holiday planner app</strong>,
-                or a simple <strong>travel planning app</strong> to organise your itinerary — Itinero is made for you:
+                Itinero works whether you’re planning a quick weekend, a football away day or a longer
+                break. Use it as your <strong>trip planner app</strong> for anything that deserves more
+                than a half-finished notes list:
               </p>
               <div className="grid3" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
                 <div className="card"><h3>Solo travel</h3><p>Keep it structured, keep it chill.</p></div>
@@ -264,6 +300,35 @@ export default function Page() {
               <a className="btn" href="#features" style={{ marginTop: 10 }}>
                 See features
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="faq-heading">
+          <div className="container">
+            <h2 id="faq-heading" className="h2">Itinero travel itinerary planner app – FAQ</h2>
+            <div className="grid3">
+              <div className="card">
+                <h3>What is Itinero?</h3>
+                <p className="sub">
+                  Itinero is a travel itinerary planner app for iPhone that turns scattered trip ideas
+                  into a simple, day-by-day plan you can actually follow on the road.
+                </p>
+              </div>
+              <div className="card">
+                <h3>Who is Itinero for?</h3>
+                <p className="sub">
+                  If you like organised trips, not 40 open tabs, Itinero is for you – solo trips, couples
+                  weekends, football away days and longer holidays.
+                </p>
+              </div>
+              <div className="card">
+                <h3>Is Itinero free?</h3>
+                <p className="sub">
+                  Yes, you can download the Itinero itinerary planner app free on the Apple App Store and
+                  start planning your next trip in minutes.
+                </p>
+              </div>
             </div>
           </div>
         </section>

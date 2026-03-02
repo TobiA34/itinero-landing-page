@@ -12,7 +12,7 @@ A clean, SEO-friendly landing page for the Itinero iOS app.
 
 ---
 
-## 🚀 How to run (local)
+## How to run (local)
 
 ### 1) Install dependencies
 ```bash
@@ -29,7 +29,7 @@ http://localhost:3000
 
 ---
 
-## 🧠 Important SEO edits (do this before deploying)
+## Important SEO edits (do this before deploying)
 Search the codebase for:
 `YOUR_DOMAIN_HERE`
 
