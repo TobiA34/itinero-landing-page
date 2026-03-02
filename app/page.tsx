@@ -86,7 +86,14 @@ export default function Page() {
             <span className="badge">Travel itinerary planner</span>
           </div>
 
-          <div className="ctaRow">
+          <input type="checkbox" id="nav-toggle" className="navToggle" />
+          <label htmlFor="nav-toggle" className="navToggleButton">
+            <span />
+            <span />
+            <span />
+          </label>
+
+          <div className="ctaRow navLinks">
             <a className="btn btnGhost" href="#app-screens">Screens</a>
             <a className="btn btnGhost" href="#features">Features</a>
             <a className="btn btnGhost" href="#use-cases">Use cases</a>
