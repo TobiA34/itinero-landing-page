@@ -276,6 +276,10 @@ img{ max-width:100%; display:block; }
   .ctaRow{
     row-gap: 6px;
   }
+  .iphoneFrameWrap{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
   .iphoneFrame{
     --phone-w: min(280px, 82vw);
   }
