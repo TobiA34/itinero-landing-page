@@ -38,19 +38,20 @@ img{ max-width:100%; display:block; }
   align-items:center;
   justify-content:center;
   width:36px;
-  height:32px;
+  height:36px;
   border-radius:999px;
-  border:1px solid rgba(148,163,184,0.4);
-  background: rgba(15,23,42,0.8);
+  border:1px solid rgba(148,163,184,0.5);
+  background: rgba(15,23,42,0.85);
   cursor:pointer;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 .navToggleButton span{
   display:block;
-  width:18px;
-  height:2px;
+  width:20px;
+  height:2.5px;
   border-radius:999px;
   background: var(--text);
-  margin:3px 0;
+  margin:3.5px 0;
   transform-origin: center;
   transition:
     transform .2s cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -66,13 +67,13 @@ img{ max-width:100%; display:block; }
   box-shadow: 0 12px 28px rgba(37,99,235,0.45);
 }
 .navToggle:checked + .navToggleButton span:nth-child(1){
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 .navToggle:checked + .navToggleButton span:nth-child(2){
   opacity:0;
 }
 .navToggle:checked + .navToggleButton span:nth-child(3){
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 .brand{
   display:flex; align-items:center; gap:10px;
