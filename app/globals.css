@@ -51,7 +51,19 @@ img{ max-width:100%; display:block; }
   border-radius:999px;
   background: var(--text);
   margin:2px 0;
-  transition: transform .16s ease, opacity .16s ease;
+  transform-origin: center;
+  transition:
+    transform .2s cubic-bezier(0.4, 0.0, 0.2, 1),
+    opacity .16s ease,
+    background .16s ease;
+}
+.navToggleButton:hover span{
+  background: var(--accent2);
+}
+.navToggle:checked + .navToggleButton{
+  background: linear-gradient(135deg, var(--accent), #2563eb);
+  border-color: transparent;
+  box-shadow: 0 12px 28px rgba(37,99,235,0.45);
 }
 .navToggle:checked + .navToggleButton span:nth-child(1){
   transform: translateY(4px) rotate(45deg);
