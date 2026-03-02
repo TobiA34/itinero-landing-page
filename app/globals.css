@@ -228,6 +228,46 @@ img{ max-width:100%; display:block; }
 .screensSection .h2{ margin-bottom: 12px; }
 .screensSection .sub{ margin-bottom: 28px; }
 
+/* Responsive tweaks */
+@media (max-width: 900px){
+  .section{ padding: 60px 0; }
+}
+
+@media (max-width: 768px){
+  .section{ padding: 52px 0; }
+  .hero{ padding: 64px 0 30px; }
+  .navInner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ctaRow{
+    justify-content: flex-start;
+  }
+  .h1{
+    font-size: clamp(30px, 7vw, 38px);
+    margin-bottom: 14px;
+  }
+  .lead{
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .phoneCard{
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 540px){
+  .container{ width: calc(100% - 32px); }
+  .section{ padding: 44px 0; }
+  .hero{ padding-top: 52px; }
+  .ctaRow{
+    row-gap: 6px;
+  }
+  .iphoneFrame{
+    --phone-w: min(280px, 82vw);
+  }
+}
+
 @keyframes floatPhone{
   0%, 100%{ transform: translateY(0) rotate(-1deg); }
   50%{ transform: translateY(-10px) rotate(1deg); }
