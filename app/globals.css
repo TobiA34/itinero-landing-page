@@ -50,7 +50,7 @@ img{ max-width:100%; display:block; }
   height:2px;
   border-radius:999px;
   background: var(--text);
-  margin:2px 0;
+  margin:3px 0;
   transform-origin: center;
   transition:
     transform .2s cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -66,13 +66,13 @@ img{ max-width:100%; display:block; }
   box-shadow: 0 12px 28px rgba(37,99,235,0.45);
 }
 .navToggle:checked + .navToggleButton span:nth-child(1){
-  transform: translateY(4px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
 }
 .navToggle:checked + .navToggleButton span:nth-child(2){
   opacity:0;
 }
 .navToggle:checked + .navToggleButton span:nth-child(3){
-  transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
 }
 .brand{
   display:flex; align-items:center; gap:10px;
