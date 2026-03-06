@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BackButton } from "../components/BackButton";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://itinero.app";
 const APP_STORE_URL = "https://apps.apple.com/us/app/itinero/id6757012086";
@@ -52,6 +53,8 @@ const articleJsonLd = {
   description:
     "A step-by-step guide to planning stress-free trips using the Itinero travel itinerary planner app, including how to build day-by-day itineraries.",
   image: SITE_URL + "/og.png",
+  datePublished: "2025-03-01",
+  dateModified: "2025-03-01",
   author: {
     "@type": "Person",
     name: "Tobi Adegoroye"
@@ -102,6 +105,9 @@ export default function BlogPage() {
       />
       <main className="section" style={{ paddingTop: 56 }}>
         <div className="container" style={{ maxWidth: 760 }}>
+          <div style={{ marginBottom: 24 }}>
+            <BackButton />
+          </div>
           <p className="badge" style={{ marginBottom: 16 }}>
             Itinero blog • Travel itinerary planner tips
           </p>
